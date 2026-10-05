@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>銀河冒險</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         主選單
+    ========================== -->
+
+    <div id="menuScreen">
+
+        <h1>🌌 銀河冒險</h1>
+
+        <p class="subtitle">
+            探索六個神秘行星，擊敗最終 Boss！
+        </p>
+
+        <div class="controls">
+
+            <h2>🎮 操作方式</h2>
+
+            <p>W / A / S / D：移動</p>
+            <p>🖱️ 滑鼠左鍵：發射子彈</p>
+            <p>SPACE：近戰攻擊</p>
+
+        </div>
+
+
+        <!-- 難度 -->
+
+        <div class="difficultyBox">
+
+            <h2>選擇難度</h2>
+
+            <div class="difficultyButtons">
+
+                <button class="difficultyButton easy"
+                    data-difficulty="easy">
+                    🟢 簡單
+                </button>
+
+                <button class="difficultyButton normal"
+                    data-difficulty="normal">
+                    🟡 標準
+                </button>
+
+                <button class="difficultyButton hard"
+                    data-difficulty="hard">
+                    🔴 困難
+                </button>
+
+            </div>
+
+            <p id="difficultyDescription">
+                標準：正常遊戲難度
+            </p>
+
+        </div>
+
+
+        <button id="startButton" class="startButton">
+            🚀 開始遊戲
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         遊戲畫面
+    ========================== -->
+
+    <div id="gameScreen">
+
+        <div id="gameUI">
+
+            <div>
+                ❤️ HP：
+                <span id="hpText">100</span>
+            </div>
+
+            <div>
+                ⚔️ 攻擊：
+                <span id="attackText">2</span>
+            </div>
+
+            <div>
+                ⭐ 分數：
+                <span id="scoreText">0</span>
+            </div>
+
+            <div>
+                🌌 關卡：
+                <span id="levelText">1</span>/6
+            </div>
+
+            <div>
+                🪐 行星：
+                <span id="planetText">地球</span>
+            </div>
+
+            <div>
+                🎯 難度：
+                <span id="difficultyText">標準</span>
+            </div>
+
+        </div>
+
+
+        <canvas
+            id="gameCanvas"
+            width="1000"
+            height="600">
+        </canvas>
+
+
+        <div class="gameHint">
+            WASD 移動　🖱️ 左鍵射擊　SPACE 近戰
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         結算畫面
+    ========================== -->
+
+    <div id="resultScreen">
+
+        <h1 id="resultTitle">
+            遊戲結束
+        </h1>
+
+        <p id="resultMessage">
+            結果
+        </p>
+
+        <div class="finalScore">
+            ⭐ 最終分數：
+            <span id="finalScore">0</span>
+        </div>
+
+        <button id="restartButton">
+            🔄 再玩一次
+        </button>
+
+        <button id="homeButton">
+            🏠 回主畫面
+        </button>
+
+    </div>
+
+
+    <script src="game.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+
+    font-family:
+        Arial,
+        "Microsoft JhengHei",
+        sans-serif;
+
+    color: white;
+
+    background: #050516;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+
+/* =========================
+   主選單
+========================= */
+
+#menuScreen {
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#menuScreen h1 {
+
+    font-size: 60px;
+
+    margin: 0 0 10px;
+
+    text-shadow:
+        0 0 10px #4db8ff,
+        0 0 30px #246bff;
+}
+
+.subtitle {
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   操作
+========================= */
+
+.controls {
+
+    padding: 10px 35px;
+
+    margin: 10px;
+
+    background:
+        rgba(0, 0, 40, 0.8);
+
+    border:
+        1px solid #3d9fff;
+
+    border-radius: 15px;
+}
+
+.controls h2 {
+
+    margin: 5px 0 10px;
+}
+
+.controls p {
+
+    margin: 6px;
+}
+
+
+/* =========================
+   難度
+========================= */
+
+.difficultyBox {
+
+    padding: 15px 30px;
+
+    margin: 10px;
+
+    background:
+        rgba(0, 0, 30, 0.85);
+
+    border:
+        2px solid #5577cc;
+
+    border-radius: 15px;
+}
+
+.difficultyBox h2 {
+
+    margin: 5px 0 15px;
+}
+
+.difficultyButtons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.difficultyButton {
+
+    padding: 10px 25px;
+
+    border: 2px solid white;
+
+    border-radius: 10px;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition: 0.2s;
+}
+
+.easy {
+
+    background: #176b35;
+}
+
+.normal {
+
+    background: #806500;
+}
+
+.hard {
+
+    background: #8a2020;
+}
+
+.difficultyButton:hover {
+
+    transform: scale(1.05);
+}
+
+.difficultyButton.selected {
+
+    transform: scale(1.1);
+
+    box-shadow:
+        0 0 20px white;
+}
+
+
+/* =========================
+   開始
+========================= */
+
+.startButton {
+
+    padding: 15px 45px;
+
+    margin-top: 15px;
+
+    font-size: 24px;
+
+    color: white;
+
+    background: #1457ad;
+
+    border:
+        2px solid #6ec8ff;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.startButton:hover {
+
+    background: #2379e0;
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 20px #3daeff;
+}
+
+
+/* =========================
+   遊戲
+========================= */
+
+#gameScreen {
+
+    display: none;
+
+    width: 100vw;
+    height: 100vh;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+#gameUI {
+
+    width: 1000px;
+
+    padding: 10px 15px;
+
+    margin-bottom: 8px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    background:
+        rgba(0, 0, 30, 0.9);
+
+    border:
+        2px solid #388cff;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+}
+
+#gameCanvas {
+
+    display: block;
+
+    width: 1000px;
+    height: 600px;
+
+    background: #05051c;
+
+    border:
+        3px solid #4aa8ff;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 20px #147aff;
+}
+
+.gameHint {
+
+    margin-top: 8px;
+
+    font-size: 15px;
+
+    color: #b8dcff;
+}
+
+
+/* =========================
+   結算
+========================= */
+
+#resultScreen {
+
+    display: none;
+
+    width: 100vw;
+    height: 100vh;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+#resultTitle {
+
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 15px white,
+        0 0 30px #348dff;
+}
+
+#resultMessage {
+
+    font-size: 25px;
+}
+
+.finalScore {
+
+    font-size: 28px;
+
+    margin: 20px;
+}
+
+#restartButton,
+#homeButton {
+
+    padding: 12px 30px;
+
+    margin: 8px;
+
+    font-size: 18px;
+
+    color: white;
+
+    background: #154d9b;
+
+    border:
+        2px solid #63b3ff;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+#restartButton:hover,
+#homeButton:hover {
+
+    background: #2775d4;
+
+    transform: scale(1.05);
+}
